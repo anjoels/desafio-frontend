@@ -1,9 +1,14 @@
 import { AppBar, Autocomplete, Button, Divider, Grid, Stack, TextField, Toolbar, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
+import { useSearch, useAccount } from 'src/bussines';
 
-export default function SiteHeader() {
+export const SiteHeader = () => {
   const theme = useTheme();
   const sm = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const search = useSearch();
+  const account = useAccount();
+
   return (
     <AppBar color='secondary' position='static' >
       <Toolbar>

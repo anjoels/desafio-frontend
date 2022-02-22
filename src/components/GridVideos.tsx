@@ -1,13 +1,17 @@
 import { Grid } from '@mui/material'
 import React from 'react'
-import CardVideo from './CardVideo'
+import { CardVideo } from 'src/components'
 
-export default function GridVideos() {
+const dta = [1, 2, 3, 4, 5, 6, 7, 8];
+
+export const GridVideos = () => {
   return (
     <Grid container>
-      <Grid item>
-        <CardVideo />
-      </Grid>
+      {dta.map(v =>
+        <Grid key={v} item>
+          <CardVideo />
+        </Grid>
+      )}
     </Grid>
   )
 }

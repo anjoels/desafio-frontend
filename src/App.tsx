@@ -1,10 +1,8 @@
 import React from 'react';
-import { Container, CssBaseline, Stack, ThemeProvider } from '@mui/material';
-import SiteHeader from './components/SiteHeader';
-import GridVideos from './components/GridVideos';
-import MainVideoPanel from './components/MainVideoPanel';
-import SquarePopUp from './components/SquarePopUp';
+import { Container, CssBaseline, ThemeProvider } from '@mui/material';
+import { SiteHeader } from './components';
 import { theme } from './theme';
+import { Home } from './pages/Home';
 
 const App = () => {
   return (
@@ -12,13 +10,7 @@ const App = () => {
       <CssBaseline />
       <Container>
         <SiteHeader />
-        <div>
-          <div>
-            <MainVideoPanel />
-            <SquarePopUp />
-          </div>
-          <GridVideos />
-        </div>
+        <Home />
       </Container>
     </ThemeProvider>
   );

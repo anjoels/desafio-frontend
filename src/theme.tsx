@@ -20,7 +20,12 @@ export const theme = createTheme({
     h1: {
       letterSpacing: 0,
       fontSize: 28,
+      fontWeight: 'bold',
     },
+    h3: {
+      fontSize: 14,
+      fontWeight: 'bold',
+    }
   },
   components: {
     MuiDivider: {
@@ -37,7 +42,22 @@ export const theme = createTheme({
           alignSelf: 'center',
           maxWidth: 1136,
           width: '100%',
-          padding: 5
+          padding: 5,
+        },
+      },
+    },
+    MuiGrid: {
+      styleOverrides: {
+        container: {
+          justifyContent: 'space-between',
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          display: 'flex',
+          margin: 3,
         },
       },
     },
